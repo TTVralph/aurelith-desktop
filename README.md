@@ -18,27 +18,45 @@ Aurelith Desktop is an AI-first command center for your computer and the first p
 - Suggested Actions section
 - `run_command` Tauri command that accepts a string and returns a mock interpreted action
 
-## Run locally
+## Local setup
 
-### 1) Install dependencies
+### 1) Use the public npm registry for this project
 
 ```bash
-npm install
+printf 'registry=https://registry.npmjs.org/\n' > .npmrc
 ```
 
-### 2) Run in web mode (frontend only)
+### 2) Install JavaScript dependencies
+
+```bash
+npm install --verbose
+```
+
+### 3) Build frontend assets (validation)
+
+```bash
+npm run build
+```
+
+### 4) Rust/Tauri sanity check
+
+```bash
+cd src-tauri && cargo check
+```
+
+### 5) Run in web mode (frontend only)
 
 ```bash
 npm run dev
 ```
 
-### 3) Run as desktop app
+### 6) Run as desktop app
 
 ```bash
 npm run tauri dev
 ```
 
-### 4) Build production app
+### 7) Build production app
 
 ```bash
 npm run tauri build
