@@ -75,6 +75,10 @@ npm run tauri dev
 npm run tauri build
 ```
 
+## CI validation
+
+GitHub Actions CI is configured in `.github/workflows/ci.yml` and runs on pull requests and pushes to `main` to validate frontend build and Rust/Tauri checks on Ubuntu.
+
 ## Notes
 
 - No authentication in v0.1.
