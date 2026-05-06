@@ -64,6 +64,8 @@ npm run tauri build
 
 ## Notes
 
+- Cloud validation in the Codex environment failed with an environment-level HTTP 403 from the cloud proxy/network policy; this does not indicate an npm/crates dependency resolution defect in the repository itself.
+- Build/validation is not marked as passing in this environment because of that external 403 restriction.
 - No authentication in v0.1.
 - No real AI API integration yet.
 - No cloud sync yet.
