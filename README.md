@@ -77,6 +77,7 @@ npm run tauri build
 
 ## Notes
 
+- Release bundling is disabled for now; app packaging/icons will be added later when release builds are introduced.
 - No authentication in v0.1.
 - No real AI API integration yet.
 - No cloud sync yet.
