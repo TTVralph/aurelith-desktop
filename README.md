@@ -75,6 +75,10 @@ npm run tauri dev
 npm run tauri build
 ```
 
+## CI validation
+
+GitHub Actions CI now runs on every pull request and on pushes to `main`, validating the frontend build and `src-tauri` Rust checks on `ubuntu-latest`.
+
 ## Notes
 
 - No authentication in v0.1.
