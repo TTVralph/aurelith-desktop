@@ -20,6 +20,8 @@ Aurelith Desktop is an AI-first command center for your computer and the first p
 
 ## Local setup
 
+For full cross-platform setup instructions, see [`docs/development.md`](docs/development.md).
+
 ### 1) Use the public npm registry for this project
 
 ```bash
@@ -38,25 +40,36 @@ npm install --verbose
 npm run build
 ```
 
-### 4) Rust/Tauri sanity check
+### 4) Linux/Tauri development prerequisites (Ubuntu/Debian)
+
+Install required system packages before running Rust/Tauri checks:
+
+```bash
+sudo apt update
+sudo apt install -y libwebkit2gtk-4.1-dev build-essential curl wget file libxdo-dev libssl-dev libayatana-appindicator3-dev librsvg2-dev pkg-config
+```
+
+### 5) Rust/Tauri sanity check
 
 ```bash
 cd src-tauri && cargo check
 ```
 
-### 5) Run in web mode (frontend only)
+> In environments missing Linux system dependencies (for example `glib-2.0` via `pkg-config`), `cargo check` will fail until those packages are installed.
+
+### 6) Run in web mode (frontend only)
 
 ```bash
 npm run dev
 ```
 
-### 6) Run as desktop app
+### 7) Run as desktop app
 
 ```bash
 npm run tauri dev
 ```
 
-### 7) Build production app
+### 8) Build production app
 
 ```bash
 npm run tauri build
@@ -64,8 +77,6 @@ npm run tauri build
 
 ## Notes
 
-- Cloud validation in the Codex environment failed with an environment-level HTTP 403 from the cloud proxy/network policy; this does not indicate an npm/crates dependency resolution defect in the repository itself.
-- Build/validation is not marked as passing in this environment because of that external 403 restriction.
 - No authentication in v0.1.
 - No real AI API integration yet.
 - No cloud sync yet.
