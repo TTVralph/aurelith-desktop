@@ -81,3 +81,7 @@ npm run tauri build
 - No authentication in v0.1.
 - No real AI API integration yet.
 - No cloud sync yet.
+
+## CI validation
+
+GitHub Actions now runs CI on every pull request and on pushes to `main`, validating both `npm run build` and `cd src-tauri && cargo check` on `ubuntu-latest`.
