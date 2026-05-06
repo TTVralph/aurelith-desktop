@@ -23,8 +23,7 @@
     }
   },
   "bundle": {
-    "active": true,
-    "targets": "all",
-    "icon": []
+    "active": false,
+    "targets": "all"
   }
 }
